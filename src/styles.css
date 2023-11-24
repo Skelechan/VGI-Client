@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #eeeeee;
+}
+
+.text-shadow {
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box-shadow {
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rounded {
+  border-radius: 15px;
+}
+
+.rounded-bottom {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}

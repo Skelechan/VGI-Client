@@ -1,0 +1,33 @@
+<header>
+  <navigation></navigation>
+</header>
+<main>
+  <div class="content">
+    <div class="content-navigator">Now Live</div>
+    <div class="content-section flex-center" *ngIf="_streams != undefined && _streams?.length != 0">
+      <live-card *ngFor="let stream of _streams" [Stream]="stream"></live-card>
+    </div>
+
+    <div class="content-section flex-center" *ngIf="_streams != undefined && _streams?.length == 0">
+      <live-card *ngFor="let stream of _streams" [Stream]="stream"></live-card>
+    </div>
+    <div class="offline" *ngIf="_streams != undefined && _streams?.length === 0">
+        <div class="sleeping">
+          <i class="fa-regular fa-face-sleeping"></i>
+        </div>
+        <div class="text">we're all sleeping</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-navigator">Recent Clips</div>
+    <div class="scrollable-content-section flex-center" *ngIf="_clips != undefined">
+      <video-card *ngFor="let clip of _clips" [Video]="clip"></video-card>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-navigator">Recent Streams</div>
+    <div class="scrollable-content-section flex-center" *ngIf="_vods != undefined">
+      <video-card *ngFor="let vod of _vods" [Video]="vod"></video-card>
+    </div>
+  </div>
+</main>
