@@ -12,13 +12,13 @@
       <live-card *ngFor="let stream of _streams" [Stream]="stream"></live-card>
     </div>
     <div class="offline fade-in" *ngIf="_streams != undefined && _streams?.length === 0">
-        <div class="sleeping">
+        <div class="offline-icon">
           <i class="fa-regular fa-face-sleeping"></i>
         </div>
-        <div class="text">we're all sleeping</div>
+        <div class="offline-text">we're all sleeping</div>
     </div>
     <div class="loading" *ngIf="_streams === undefined">
-      <i class="icon fa-solid fa-spinner"></i>
+      <i class="loading-icon fa-solid fa-spinner"></i>
     </div>
   </div>
   <div class="content">
@@ -27,7 +27,7 @@
       <video-card *ngFor="let clip of _clips" [Video]="clip"></video-card>
     </div>
     <div class="loading" *ngIf="_clips === undefined">
-      <i class="icon fa-solid fa-spinner"></i>
+      <i class="loading-icon fa-solid fa-spinner"></i>
     </div>
   </div>
   <div class="content">
@@ -36,7 +36,7 @@
       <video-card *ngFor="let vod of _vods" [Video]="vod"></video-card>
     </div>
     <div class="loading" *ngIf="_vods === undefined">
-      <i class="icon fa-solid fa-spinner"></i>
+      <i class="loading-icon fa-solid fa-spinner"></i>
     </div>
   </div>
 </main>

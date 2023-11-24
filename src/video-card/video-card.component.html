@@ -1,7 +1,7 @@
 ﻿<a class="video rounded box-shadow" *ngIf="video != undefined" href="{{video!.url}}">
-  <div class="thumbnail rounded" [style.background-image]="'url(' + video!.streamThumbnail + ')'"></div>
-  <div class="info rounded-bottom">
-    <div class="title">{{video!.displayName}}</div>
-    <div class="subtitle">{{video!.title}}</div>
+  <div class="video-thumbnail rounded" [style.background-image]="'url(' + video!.streamThumbnail + ')'"></div>
+  <div class="video-info-section rounded-bottom">
+    <div class="video-title">{{video!.displayName}}</div>
+    <div class="video-subtitle">{{video!.title}}</div>
   </div>
 </a>

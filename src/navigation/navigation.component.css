@@ -10,20 +10,21 @@
   background: rgba(255, 255, 255, 0.80);
   backdrop-filter: blur(5px);
   width: calc(100% - 20px);
+  z-index: 9999;
+}
 
-  .buttons {
+.nav-bar-buttons {
     display: flex;
     align-items: center;
     gap: 15px;
+}
 
-    .icon {
-      color: #000;
-      font-size: 36px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-  }
+.nav-bar-icon {
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .vgi-logo-text {

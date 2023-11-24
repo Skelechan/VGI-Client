@@ -1,8 +1,9 @@
 ﻿<a class="live-stream rounded box-shadow" *ngIf="stream != undefined" href="https://twitch.tv/{{stream!.displayName}}">
-  <div class="tag"></div>
-  <div class="info rounded-bottom">
-    <div class="pfp" [style.background-image]="'url(' + stream!.profileImage + ')'" [style.border-color]="'#' + stream!.profileColor "></div>
-    <div class="title">{{stream!.displayName}}</div>
-    <div class="subtitle">{{stream!.gameName}}</div>
+  <div class="live-stream-thumbnail rounded" [style.background-image]="'url(' + stream!.streamThumbnail + ')'"></div>
+  <div class="live-stream-tag"></div>
+  <div class="live-stream-info rounded-bottom">
+    <div class="live-stream-info-pfp" [style.background-image]="'url(' + stream!.profileImage + ')'" [style.border-color]="'#' + stream!.profileColor "></div>
+    <div class="live-stream-info-title">{{stream!.displayName}}</div>
+    <div class="live-stream-info-subtitle">{{stream!.gameName}}</div>
   </div>
 </a>

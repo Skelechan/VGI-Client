@@ -8,70 +8,82 @@
   border-radius: 15px;
   position: relative;
   background: grey;
+  outline: #7c00de 1px solid;
+  overflow: hidden;
+}
 
-  .tag {
-    position: absolute;
-    right: 10px;
-    display: flex;
-    padding: 5px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 10px;
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.70);
-  }
+.live-stream-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
-  .tag:before{
-    content: 'LIVE'
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
-  .info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  color: #FFF;
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  overflow: hidden;
+  white-space: nowrap;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 20%, rgba(0, 0, 0, 0.80) 80%);
+}
 
-    color: #FFF;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    overflow: hidden;
-    white-space: nowrap;
+.live-stream-thumbnail {
+  height: calc(100% + 20px);
+  filter: blur(1px);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 16/9;
+  margin-top: -10px;
+  margin-left: -10px;
+}
 
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 20%, rgba(0, 0, 0, 0.80) 80%);
 
-    .title {
-      padding: 10px 10px 0px;
-      font-size: 13px;
-    }
+.live-stream-info-title {
+  padding: 10px 10px 0px;
+  font-size: 13px;
+}
 
-    .subtitle {
-      padding: 0px 10px 10px;
-      font-size: 11px;
-    }
+.live-stream-info-subtitle {
+  padding: 0px 10px 10px;
+  font-size: 11px;
+}
 
-    .pfp {
-      aspect-ratio: 1 / 1;
-      width: 50%;
-      border-radius: 100%;
-      border: 2px solid #9146FF;
-      background-size: auto;
-      background-size: cover;
-      display: flex;
-      align-self: center;
-    }
-  }
+.live-stream-info-pfp {
+  aspect-ratio: 1 / 1;
+  width: 50%;
+  border-radius: 100%;
+  border: 2px solid #9146FF;
+  background-size: cover;
+  display: flex;
+  align-self: center;
+}
+
+.live-stream-tag {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  color: #FFF;
+  font-family: Montserrat, serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.70);
+}
+
+.live-stream-tag:before{
+  content: 'LIVE'
 }
 
